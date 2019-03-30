@@ -1,0 +1,114 @@
+:root {
+	--accent-color: #E94312;
+}
+
+body {
+	margin: 0;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 2em 75px;
+	align-items: flex-end;
+}
+.nav-logo {
+	width: 10%;
+}
+.nav-link {
+display: flex;
+width: 75%;
+list-style: none;
+}
+.nav-link li {
+cursor: pointer;
+}
+.nav-link li:hover {
+	color: var(--accent-color);
+	border-bottom: 1px solid var(--accent-color)
+}
+.nav-link li + li {
+margin-left: 2em;
+}
+
+.nav-search span + span {
+	margin-left: 1em;
+}
+
+header{
+	height: 100vh;
+}
+.header-text {
+	float: left;
+	width: 25%;
+	padding: 4.5em;
+	box-sizing: border-box;
+}
+
+.header-text h1 {
+	font-size: 8rem;
+	margin: 0.5rem 0;
+	text-transform: uppercase; 
+}
+
+
+.header-text h2 {
+	font-size: 4em;
+	margin: 0.25rem 0; 
+}
+
+
+.header-text p {
+	font-size: 1.3em;
+	margin: 2em 0; 
+	width: 75%;
+}
+
+.header-image {
+	float: right;
+	width: 75%;
+	height: 70%;
+	background-image: url("images/try1.jpeg");
+	background-position: top;
+	background-size: cover;
+	background-position-y: 5em;
+}
+.header-image img {
+	width: 70%
+}
+
+/*For tablet view*/
+@media screen and (max-width: 920px) {
+	.nav-link {
+		width: 35%;
+	}
+	.nav-search {
+		width: 20%;
+	}
+	.header-text h1 {
+		font-size: 4.5em;
+	}
+	.header-image {
+		background-position-y: -3em;
+	}
+
+}
+
+/*For mobile view*/
+@media screen and (max-width: 650px){
+	nav{
+		padding: 1em;
+	}
+	.nav-links {
+		display: none;
+	}
+	.nav-search {
+		display: none;
+	}
+	.header-text {
+		width: 100%;
+		padding: 1em;
+	}
+	.header-text h1{
+		font-size: 3.5em;
+	}
+}
